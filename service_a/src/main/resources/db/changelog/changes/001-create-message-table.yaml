@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-message-table
+      author: admin
+      changes:
+        - createTable:
+            tableName: "messages"
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: person_name
+                  type: VARCHAR(30)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: content
+                  type: VARCHAR
+
+              - column:
+                  name: date_message
+                  type: TIMESTAMP

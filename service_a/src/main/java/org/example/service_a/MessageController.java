@@ -21,8 +21,8 @@ public class MessageController {
         return messageService.findAll();
     }
 
-    @GetMapping("/{text}")
-    public Flux<Message> getMassageByText(@PathVariable String text) {
-        return messageService.findByText(text);
+    @GetMapping("/{content}")
+    public Flux<Message> getMassageByText(@PathVariable String content) {
+        return messageService.findByContent(content);
     }
 }

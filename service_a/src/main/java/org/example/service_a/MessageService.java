@@ -19,7 +19,7 @@ public class MessageService {
         return messageRepository.findAll();
     }
 
-    public Flux<Message> findByText(String text) {
-       return messageRepository.findByTextContaining(text);
+    public Flux<Message> findByContent(String content) {
+       return messageRepository.findByContentContaining(content);
     }
 }

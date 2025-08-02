@@ -6,5 +6,5 @@ import reactor.core.publisher.Flux;
 
 @Repository
 public interface MessageRepository extends R2dbcRepository<Message, Long> {
-     Flux<Message> findByTextContaining(String text);
+     Flux<Message> findByContentContaining(String content);
 }
